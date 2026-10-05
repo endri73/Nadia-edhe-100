@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gëzuar Ditëlindjen, Nadia!</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div id="gift-overlay">
+  <p id="gift-instruction">Shtyp dhuratën 5 herë për një surprizë</p>
+  <div id="gift-box">
+    <div class="gift-lid"></div>
+    <div class="gift-ribbon-v"></div>
+    <div class="gift-ribbon-h"></div>
+    <div class="gift-bow"></div>
+  </div>
+  <div id="gift-pips">
+    <span class="pip"></span><span class="pip"></span><span class="pip"></span><span class="pip"></span><span class="pip"></span>
+  </div>
+</div>
+
+<button id="music-toggle" aria-label="Luaj muzikën">🔇</button>
+<audio id="bg-music" loop>
+  <source src="https://raw.githubusercontent.com/endri73/Noah-edhe-100/main/Music/HAPPYBirthdaySong.mp3" type="audio/mpeg">
+</audio>
+
+<div id="top-left">
+  <div id="balloon-ui">
+    <div id="balloon-counter">🎈 <span id="balloon-count">0</span></div>
+    <button id="balloon-reset" aria-label="Rivendos numëruesin">↺</button>
+  </div>
+  <div id="mode-switch">
+    <button class="mode-btn active" data-mode="balloon" data-emoji="🎈">🎈</button>
+    <button class="mode-btn" data-mode="petal" data-emoji="🌸">🌸</button>
+    <button class="mode-btn" data-mode="butterfly" data-emoji="🦋">🦋</button>
+    <button class="mode-btn" data-mode="none" data-emoji="🚫">🚫</button>
+  </div>
+</div>
+
+<canvas id="fw-canvas"></canvas>
+
+<div id="scene">
+  <div class="bunting" id="bunting"></div>
+
+  <h1 class="title">Gëzuar Ditëlindjen, <span class="name display">Nadia</span> 🌸</h1>
+  <p class="subtitle">Sot është dita jote e veçantë — fryj qirinjtë dhe shpërthe sa më shumë tullumbace!</p>
+
+  <div id="cake-wrap">
+    <div class="candles" id="candles">
+      <div class="candle" data-lit="1"><div class="flame"></div></div>
+      <div class="candle" data-lit="1"><div class="flame"></div></div>
+      <div class="candle" data-lit="1"><div class="flame"></div></div>
+      <div class="candle" data-lit="1"><div class="flame"></div></div>
+      <div class="candle" data-lit="1"><div class="flame"></div></div>
+    </div>
+    <div class="cherry"></div>
+    <div class="tier top"></div>
+    <div class="tier mid"></div>
+    <div class="tier bottom"></div>
+    <div class="plate"></div>
+  </div>
+  <p class="hint" id="hint">✨ Kliko çdo qiri për ta fikur ✨</p>
+
+  <div id="countdown-section">
+    <h2 class="countdown-title">Sa Kohë Deri Ditëlindjen Tjetër</h2>
+    <div class="countdown-grid">
+      <div class="countdown-cell"><span class="num" id="cdDays">0</span><span class="lbl">Ditë</span></div>
+      <div class="countdown-cell"><span class="num" id="cdHours">0</span><span class="lbl">Orë</span></div>
+      <div class="countdown-cell"><span class="num" id="cdMins">0</span><span class="lbl">Min</span></div>
+      <div class="countdown-cell"><span class="num" id="cdSecs">0</span><span class="lbl">Sek</span></div>
+    </div>
+  </div>
+</div>
+
+<script src="js/audio.js"></script>
+<script src="js/fireworks.js"></script>
+<script src="js/music.js"></script>
+<script src="js/counts.js"></script>
+<script src="js/falling-items.js"></script>
+<script src="js/gift.js"></script>
+<script src="js/bunting.js"></script>
+<script src="js/candles.js"></script>
+<script src="js/countdown.js"></script>
+
+</body>
+</html>
